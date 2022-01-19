@@ -17,15 +17,15 @@ export default function Header() {
 
   return (
     <Navbar color="light" expand="md" light>
-      <NextLink href="/" passHref>
-        <NavbarBrand>На главную</NavbarBrand>
-      </NextLink>
+      <NavbarBrand tag={NextLink} href={{ pathname: "/" }} passHref>
+        <a className="navbar-brand">Home</a>
+      </NavbarBrand>
 
       <NavbarToggler onClick={() => setCollapse(!collapse)} />
       <Collapse isOpen={collapse} navbar>
         <Nav className="me-auto" navbar>
           <NavItem>
-            <NextLink href="/contacts" passHref>
+            <NextLink href={{ pathname: "/contacts" }} passHref>
               <NavLink>Контакты</NavLink>
             </NextLink>
           </NavItem>
