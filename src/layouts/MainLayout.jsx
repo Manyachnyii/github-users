@@ -6,23 +6,11 @@ import Header from "../Header";
 import bg from "../assets/images/coming-soon.jpg";
 
 export default function MainLayout({ children }) {
-  const particlesInit = (main) => {
-    console.log(main);
-
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-  };
-
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
-
   return (
     <>
       <div className="wrapper">
         <Particles
           id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
           options={{
             fpsLimit: 60,
             particles: {
