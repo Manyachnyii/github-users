@@ -1,4 +1,5 @@
 import { useState } from "react";
+import NextLink from "next/link";
 
 import {
   Navbar,
@@ -16,12 +17,17 @@ export default function Header() {
 
   return (
     <Navbar color="light" expand="md" light>
-      <NavbarBrand href="/">На главную</NavbarBrand>
+      <NextLink href="/" passHref>
+        <NavbarBrand href="/">На главную</NavbarBrand>
+      </NextLink>
+
       <NavbarToggler onClick={() => setCollapse(!collapse)} />
       <Collapse isOpen={collapse} navbar>
         <Nav className="me-auto" navbar>
           <NavItem>
-            <NavLink href="/contacts">Контакты</NavLink>
+            <NextLink href="/contacts" passHref>
+              <NavLink href="/contacts">Контакты</NavLink>
+            </NextLink>
           </NavItem>
         </Nav>
         <Button color="primary" className="ms-auto">
