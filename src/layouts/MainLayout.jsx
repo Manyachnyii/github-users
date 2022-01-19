@@ -37,14 +37,14 @@ export default function MainLayout({ children }) {
                 width: 1,
               },
               collisions: {
-                enable: true,
+                enable: false,
               },
               move: {
                 direction: "none",
                 enable: true,
                 outMode: "bounce",
                 random: false,
-                speed: 4,
+                speed: 3,
                 straight: false,
               },
               number: {
