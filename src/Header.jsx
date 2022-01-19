@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <Navbar color="light" expand="md" light>
       <NextLink href="/" passHref>
-        <NavbarBrand href="/">На главную</NavbarBrand>
+        <NavbarBrand>На главную</NavbarBrand>
       </NextLink>
 
       <NavbarToggler onClick={() => setCollapse(!collapse)} />
@@ -26,7 +26,7 @@ export default function Header() {
         <Nav className="me-auto" navbar>
           <NavItem>
             <NextLink href="/contacts" passHref>
-              <NavLink href="/contacts">Контакты</NavLink>
+              <NavLink>Контакты</NavLink>
             </NextLink>
           </NavItem>
         </Nav>
