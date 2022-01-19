@@ -87,6 +87,8 @@ export default function MainLayout({ children }) {
 
         main {
           grid-area: main;
+          z-index: 1;
+          background: rgba(255, 255, 255, 0.2);
         }
       `}</style>
     </>
