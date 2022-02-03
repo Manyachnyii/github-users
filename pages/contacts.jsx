@@ -7,13 +7,13 @@ export default function Contacts(props) {
   return (
     <MainLayout>
       <h1>Страница со списком контактов</h1>
-      <ContactList users={users} />
+      {users && <ContactList users={users} />}
     </MainLayout>
   );
 }
 
 export const getStaticProps = async (ctx) => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const res = await fetch("https://api.github.com/users?per_page=9&page=1");
   const users = await res.json();
 
   if (!users) {
