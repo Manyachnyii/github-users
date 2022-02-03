@@ -62,7 +62,7 @@ export default function MainLayout({ children }) {
             <header>
               <Header />
             </header>
-            <main>{children}</main>
+            <main className="py-3">{children}</main>
           </div>
         </Container>
       </div>

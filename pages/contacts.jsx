@@ -6,7 +6,7 @@ export default function Contacts(props) {
 
   return (
     <MainLayout>
-      <h1>Страница со списком контактов</h1>
+      <h1 className="text-center">Пользователи GitHub</h1>
       {users && <ContactList users={users} />}
     </MainLayout>
   );

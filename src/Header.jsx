@@ -26,7 +26,7 @@ export default function Header() {
         <Nav className="me-auto" navbar>
           <NavItem>
             <NextLink href={{ pathname: "/contacts" }} passHref>
-              <NavLink>Контакты</NavLink>
+              <NavLink>GitHub users</NavLink>
             </NextLink>
           </NavItem>
         </Nav>
