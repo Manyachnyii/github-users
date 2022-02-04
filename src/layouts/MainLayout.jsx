@@ -1,7 +1,7 @@
 import { Container } from "reactstrap";
 import Particles from "react-tsparticles";
 
-import Header from "../Header";
+import Header from "../components/Header";
 
 import bg from "../assets/images/coming-soon.jpg";
 
