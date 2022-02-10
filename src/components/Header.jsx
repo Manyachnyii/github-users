@@ -25,7 +25,7 @@ export default function Header() {
       <Collapse isOpen={collapse} navbar>
         <Nav className="me-auto" navbar>
           <NavItem>
-            <NextLink href={{ pathname: "/contacts" }} passHref>
+            <NextLink href={{ pathname: "/users" }} passHref>
               <NavLink>GitHub users</NavLink>
             </NextLink>
           </NavItem>
