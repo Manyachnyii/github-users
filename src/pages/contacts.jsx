@@ -7,11 +7,13 @@ import getUserList from "../services/getUserList";
 
 export default function Contacts() {
   const [users, setUsers] = useState([]);
+  const [next, setNext] = useState("");
+  console.log(next);
 
   useEffect(() => {
     getUserList().then((data) => {
-      console.log("data", data);
       setUsers(data.users);
+      setNext(data.nextLink);
     });
   }, []);
 
