@@ -1,7 +1,6 @@
 import parseLink from "../utils/parseLink";
 
-export default async function getUserList(req) {
-  const url = req || "https://api.github.com/users?per_page=9";
+export default async function getUserList(url = "https://api.github.com/users?per_page=9") {
   const options = {
     headers: {
       accept: "application/vnd.github.v3+json",

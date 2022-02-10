@@ -7,20 +7,34 @@ import getUserList from "../services/getUserList";
 
 export default function Contacts() {
   const [users, setUsers] = useState([]);
-  const [next, setNext] = useState("");
-  console.log(next);
+  const [page, setPage] = useState(0);
+  const [pageLinks, setPageLinks] = useState([
+    "https://api.github.com/users?per_page=9",
+  ]);
 
   useEffect(() => {
-    getUserList().then((data) => {
+    if (page < 0) {
+      setPage(0);
+    }
+
+    getUserList(pageLinks[page]).then((data) => {
       setUsers(data.users);
-      setNext(data.nextLink);
+      if (page >= pageLinks.length - 1) {
+        setPageLinks([...pageLinks, data.nextLink]);
+      }
     });
-  }, []);
+  }, [page, pageLinks]);
 
   return (
     <MainLayout>
       <h1 className="text-center">Пользователи GitHub</h1>
-      {users && <ContactList users={users} />}
+      {users && (
+        <ContactList
+          users={users}
+          prevPage={() => setPage(--page)}
+          nextPage={() => setPage(++page)}
+        />
+      )}
     </MainLayout>
   );
 }
