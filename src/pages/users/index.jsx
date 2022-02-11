@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-import MainLayout from "../layouts/MainLayout";
-import ContactList from "../components/ContactList";
+import MainLayout from "../../layouts/MainLayout";
+import ContactList from "../../components/ContactList";
 
-import getUserList from "../services/getUserList";
+import getUserList from "../../services/getUserList";
 
 export default function Contacts() {
   const [users, setUsers] = useState([]);
