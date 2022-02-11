@@ -1,4 +1,4 @@
-import { Container } from "reactstrap";
+import { Container, Row } from "reactstrap";
 import Particles from "react-tsparticles";
 
 import Header from "../components/Header";
@@ -58,12 +58,16 @@ export default function MainLayout({ children }) {
         />
 
         <Container>
-          <div className="grid-container">
-            <header>
-              <Header />
-            </header>
-            <main className="py-3">{children}</main>
-          </div>
+          <Row>
+            <div className="grid-container">
+              <header>
+                <Header />
+              </header>
+              <main>
+                <>{children}</>
+              </main>
+            </div>
+          </Row>
         </Container>
       </div>
 
@@ -88,7 +92,7 @@ export default function MainLayout({ children }) {
         main {
           grid-area: main;
           z-index: 1;
-          background: rgba(255, 255, 255, 0.2);
+          //background: rgba(255, 255, 255, 0.2);
         }
       `}</style>
     </>
