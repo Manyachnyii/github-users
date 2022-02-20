@@ -1,3 +1,4 @@
+import moment from "moment";
 import Link from "next/link";
 import {
   Row,
@@ -28,7 +29,9 @@ export default function UserRepos({ repos }) {
                 <p className="lang">
                   {repo.language && `Lang: ${repo.language}`}
                 </p>
-                <p className="updated">{`Updated: ${repo.updated_at}`}</p>
+                <p className="updated">{`Updated: ${moment(
+                  repo.updated_at
+                ).format("DD.MM.YYYY, HH:mm:ss")}`}</p>
               </CardText>
             </CardBody>
           </Card>
