@@ -25,13 +25,13 @@ export default function UserRepos({ repos }) {
                 )}
               </CardTitle>
               <CardSubtitle>{repo.description}</CardSubtitle>
-              <CardText className="mt-auto">
-                <p className="lang">
+              <CardText className="d-flex flex-column mt-auto">
+                <span className="lang">
                   {repo.language && `Lang: ${repo.language}`}
-                </p>
-                <p className="updated">{`Updated: ${moment(
+                </span>
+                <span className="updated">{`Updated: ${moment(
                   repo.updated_at
-                ).format("DD.MM.YYYY, HH:mm:ss")}`}</p>
+                ).format("DD.MM.YYYY, HH:mm:ss")}`}</span>
               </CardText>
             </CardBody>
           </Card>
@@ -39,10 +39,6 @@ export default function UserRepos({ repos }) {
       ))}
 
       <style jsx>{`
-        .lang,
-        .updated {
-          margin-bottom: 0;
-        }
         .lang {
           color: red;
         }
