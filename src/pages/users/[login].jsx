@@ -5,6 +5,7 @@ import { Col, Row } from "reactstrap";
 
 import MainLayout from "../../layouts/MainLayout";
 import UserInfo from "../../components/UserInfo";
+import UserRepos from "../../components/UserRepos";
 
 import getUserInfo from "../../services/getUserInfo";
 import getUserRepos from "../../services/getUserRepos";
@@ -40,6 +41,7 @@ export default function UserPage() {
         <Col md={4}>{!!user && <UserInfo user={user} />}</Col>
         <Col md={8}>
           <h2 className="text-center py-2">Last updated repositories</h2>
+          {!!repos && <UserRepos repos={repos} />}
         </Col>
       </Row>
     </MainLayout>
