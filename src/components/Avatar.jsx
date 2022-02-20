@@ -11,6 +11,7 @@ export default function Avatar({ url }) {
       width={128}
       height={128}
       layout="responsive"
+      priority
     />
   );
 }
