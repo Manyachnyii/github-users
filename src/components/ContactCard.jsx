@@ -10,20 +10,15 @@ import {
   CardText,
 } from "reactstrap";
 
+import Avatar from "./Avatar";
+
 export default function ContactCard({ user }) {
   return (
     <Card>
       <CardBody>
         <Row className="g-3 align-items-center text-center text-xl-start">
           <Col xl={5}>
-            <Image
-              className="rounded-circle"
-              src={user.avatar_url}
-              alt="Avatar"
-              width={128}
-              height={128}
-              layout="responsive"
-            />
+            <Avatar url={user.avatar_url} />
           </Col>
 
           <Col xl={7}>
@@ -32,7 +27,7 @@ export default function ContactCard({ user }) {
               Тип: {user.type}
             </CardSubtitle>
             <CardText>
-              <Link href={user.html_url}>
+              <Link href={`/users/${user.login}`}>
                 <a>Профиль</a>
               </Link>
             </CardText>
