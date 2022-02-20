@@ -19,12 +19,14 @@ export default function UserPage() {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
-    getUserInfo(login).then((data) => {
-      setUser(data?.userInfo);
-    });
-    getUserRepos(login).then((data) => {
-      setRepos(sortDescUpdatesRepos(data?.userRepos));
-    });
+    if (login) {
+      getUserInfo(login).then((data) => {
+        setUser(data?.userInfo);
+      });
+      getUserRepos(login).then((data) => {
+        setRepos(sortDescUpdatesRepos(data?.userRepos));
+      });
+    }
   }, [login]);
 
   return (
