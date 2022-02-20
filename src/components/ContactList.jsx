@@ -15,10 +15,10 @@ export default function ContactList({ users, prevPage, nextPage }) {
 
       <Row className="my-5">
         <div className="d-flex justify-content-evenly">
-          <Button color="light" outline onClick={prevPage}>
+          <Button color="black" outline onClick={prevPage}>
             {"< НАЗАД"}
           </Button>
-          <Button color="light" outline onClick={nextPage}>
+          <Button color="black" outline onClick={nextPage}>
             {"ДАЛЕЕ >"}
           </Button>
         </div>
