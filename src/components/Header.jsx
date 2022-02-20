@@ -4,12 +4,6 @@ import NextLink from "next/link";
 import {
   Navbar,
   NavbarBrand,
-  NavbarToggler,
-  Collapse,
-  Nav,
-  NavItem,
-  NavLink,
-  Button,
 } from "reactstrap";
 
 export default function Header() {
@@ -20,17 +14,6 @@ export default function Header() {
       <NavbarBrand tag={NextLink} href={{ pathname: "/" }} passHref>
         <a className="navbar-brand">Home</a>
       </NavbarBrand>
-
-      <NavbarToggler onClick={() => setCollapse(!collapse)} />
-      <Collapse isOpen={collapse} navbar>
-        <Nav className="me-auto" navbar>
-          <NavItem>
-            <NextLink href={{ pathname: "/users" }} passHref>
-              <NavLink>GitHub users</NavLink>
-            </NextLink>
-          </NavItem>
-        </Nav>
-      </Collapse>
     </Navbar>
   );
 }
