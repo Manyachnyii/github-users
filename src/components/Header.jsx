@@ -30,9 +30,6 @@ export default function Header() {
             </NextLink>
           </NavItem>
         </Nav>
-        <Button color="primary" className="ms-auto">
-          Войти
-        </Button>
       </Collapse>
     </Navbar>
   );
